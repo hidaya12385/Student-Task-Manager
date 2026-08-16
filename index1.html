@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Task Manager</title>
+<link rel="stylesheet" href="index1.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <span class="mark">✓</span>
+      <h1>Task Manager</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="form-card">
+      <h2>Add a task</h2>
+      <form id="taskForm">
+        <div class="field">
+          <label for="taskName">Task</label>
+          <input type="text" id="taskName" placeholder="e.g. Finish assignment" required>
+        </div>
+        <div class="field">
+          <label for="deadline">Deadline</label>
+          <input type="date" id="deadline">
+        </div>
+        <button type="submit" class="add-btn">Add task</button>
+      </form>
+    </section>
+
+    <section class="list-card">
+      <div class="list-header">
+        <h2>Your tasks</h2>
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
+      <ul id="taskList" class="task-list"></ul>
+      <p id="emptyState" class="empty-state">No tasks yet. Add one above.</p>
+    </section>
+
+  </main>
+
+  <script src="index1.js"></script>
+</body>
+</html>
